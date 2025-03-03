@@ -3,29 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>HTML & CSS Features</title>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+        .box {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 15px;
+            animation: slide 2s infinite alternate;
+        }
+        body {
+            background-color: lightgray;
+            background-image: url('image.jpg');
+            background-size: cover;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+        button:hover {
+            background-color: red;
+        }
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(100px); }
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <div class="container">
         <h1>Welcome to My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <article>
-                <h2>About Us</h2>
-                <p>This is a sample paragraph describing the website.</p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Website</p>
-    </footer>
+        
+        <p>Here are some useful links:</p>
+
+        <!-- Liên kết nội bộ -->
+        <a href="about.html">Go to About Page</a><br>
+
+        <!-- Liên kết ngoài -->
+        <a href="https://example.com" target="_blank" title="Visit Example">Visit Example</a><br>
+
+        <!-- Liên kết email -->
+        <a href="mailto:someone@example.com">Send Email</a><br>
+
+        <!-- Liên kết số điện thoại -->
+        <a href="tel:+1234567890">Call Us</a><br>
+
+        <div class="box">Animated Box</div>
+
+        <button>Click Me</button>
+    </div>
+
 </body>
 </html>
