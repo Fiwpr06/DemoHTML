@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    /* background-image: url('https://images.pexels.com/photos/206648/pexels-photo-206648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+    background-size: cover;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu {
+    display: none;
+    background-color: #333;
+    padding: 0.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.menu-toggle {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 15px;
+    animation: slide 2s infinite alternate ease-in-out;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: red;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-50px); } /* Đi sang trái 50px */
+    50% { transform: translateX(0); } /* Về giữa */
+    100% { transform: translateX(50px); } /* Đi sang phải 50px */
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 1.125rem;
+        background-color: steelblue;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+        background-color: coral;
+    }
+    .header {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+    .container {
+        padding: 0.75rem;
+    }
+    .menu a {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+        background-color: wheat;
+    }
+    .header {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .container {
+        padding: 0.5rem;
+    }
+    .menu a {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+}
