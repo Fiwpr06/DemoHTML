@@ -20,24 +20,14 @@ header {
   width: 100%;
 }
 
-/* CONTAINER */
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 1rem;
-  max-width: 1200px;
-  width: 100%;
-}
-
 /* NAVIGATION MENU */
 .navbar {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
+  justify-content: center;
+  background-color: #444;
   padding: 1rem;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -51,34 +41,14 @@ header {
   background-color: #555;
 }
 
-/* FLEXBOX SECTION */
-.flex-container {
+/* CONTAINER */
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.flex-item {
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  width: 300px;
-  text-align: center;
-}
-
-/* GRID LAYOUT SECTION */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.grid-item {
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
 /* TABLE STYLES */
@@ -122,6 +92,21 @@ button:hover {
   background-color: red;
 }
 
+/* VIDEO & AUDIO */
+audio,
+video {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin-top: 20px;
+}
+
 /* ANIMATION */
 @keyframes slide {
   0% {
@@ -152,7 +137,7 @@ button:hover {
     font-size: 1.2rem;
   }
   .container {
-    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
   }
 }
 
@@ -166,9 +151,6 @@ button:hover {
     font-size: 1.75rem;
     padding: 1.25rem;
   }
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* MOBILE (MEDIUM) */
@@ -180,14 +162,6 @@ button:hover {
   header {
     font-size: 1.5rem;
     padding: 1rem;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .grid-container {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -210,11 +184,5 @@ button:hover {
   header {
     font-size: 1.25rem;
     padding: 0.75rem;
-  }
-  .container {
-    padding: 0.5rem;
-  }
-  .grid-container {
-    grid-template-columns: 1fr;
   }
 }
