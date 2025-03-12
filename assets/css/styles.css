@@ -8,6 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden; /* Fix overflow issue */
+  width: 100%;
 }
 
 /* HEADER */
@@ -49,6 +51,7 @@ header {
   padding: 1rem;
   max-width: 1200px;
   width: 100%;
+  overflow-x: hidden; /* Fix overflow issue */
 }
 
 /* TABLE STYLES */
@@ -56,6 +59,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  overflow-x: auto;
+  display: block;
+  max-width: 100%;
 }
 
 th,

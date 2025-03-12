@@ -36,7 +36,6 @@
       <a href="tel:+1234567890">Call Us</a><br />
 
       <div class="box">Animated Box</div>
-
       <button>Click Me</button>
 
       <!-- Table Section -->
@@ -61,29 +60,49 @@
 
       <!-- Form Section -->
       <form>
+        <label for="fullName">Full Name:</label>
         <input
           type="text"
+          id="fullName"
           placeholder="Full Name"
           required
           minlength="3"
           maxlength="20"
         />
-        <input type="email" placeholder="Email Address" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Email Address" required />
+
+        <label for="password">Password:</label>
         <input
           type="password"
+          id="password"
           placeholder="Password"
           required
           pattern=".{8,}"
           title="At least 8 characters"
         />
-        <input type="number" placeholder="Age" />
-        <input type="date" />
-        <input type="file" />
-        <input type="checkbox" /> Subscribe
-        <input type="radio" name="gender" value="male" /> Male
-        <input type="radio" name="gender" value="female" /> Female
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Age" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" />
+
+        <label for="fileUpload">Upload File:</label>
+        <input type="file" id="fileUpload" />
+
+        <input type="checkbox" id="subscribe" />
+        <label for="subscribe">Subscribe</label>
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
       </form>
 
+      <!-- Audio & Video Section -->
       <audio controls>
         <source
           src="./assets/audio/Ái Nộ  Masew x Khoi Vu.mp3"
@@ -105,6 +124,71 @@
         height="320"
         src="https://www.youtube.com/embed/CL13X-8o4h0"
       ></iframe>
+
+      <!-- Semantic Elements -->
+      <section>
+        <h2>Latest News</h2>
+        <p>Breaking news content...</p>
+      </section>
+
+      <article>
+        <h2>Blog Title</h2>
+        <p>Blog content...</p>
+      </article>
+
+      <aside>
+        <p>Related Articles</p>
+      </aside>
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+      </fieldset>
+
+      <label for="browsers">Choose a browser:</label>
+      <input list="browsers" id="browsers" />
+      <datalist id="browsers">
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Safari"></option>
+      </datalist>
+
+      <figure>
+        <img
+          width="560"
+          src="./assets/img/77763.jpg"
+          alt="A beautiful sunset"
+        />
+        <figcaption>Sunset</figcaption>
+      </figure>
+
+      <!-- Accessible Tables -->
+      <table>
+        <tr>
+          <th scope="row">John</th>
+          <td>95</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th id="name">Name</th>
+          <th id="score">Score</th>
+        </tr>
+        <tr>
+          <td headers="name">John</td>
+          <td headers="score">95</td>
+        </tr>
+      </table>
+
+      <!-- Keyboard Navigation & Accessibility -->
+      <div tabindex="0">Focusable element</div>
+      <button accesskey="s">Submit</button>
+
+      <div aria-hidden="true">This is hidden from screen readers</div>
+
+      <div aria-live="polite">Loading...</div>
     </main>
 
     <!-- Footer Section -->
