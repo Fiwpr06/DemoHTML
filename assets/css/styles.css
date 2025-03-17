@@ -199,6 +199,18 @@ iframe {
   }
 }
 
+.box-transform {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(39, 175, 125);
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.box-transform:hover {
+  background-color: rgba(14, 186, 57, 0.877);
+  transform: scale(2);
+}
+
 .loader {
   width: 50px;
   height: 50px;
